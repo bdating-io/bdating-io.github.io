@@ -1,168 +1,69 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bdating.io</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <body>
+    <main class="container-fluid">
+      <header>
+        <div id="logo-container">
+          <h1 id="logo-text" class="text-center">
+            Join Bdating
+          </h1>
 
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+          <img id="mm-logo" src="logo.png" />
+        </div>
+      </header>
+    <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                </h4>
+                <p class="info-text alert">
+                  <span id="getWhatToDo">You have to be in Metamask to run this app.</span>
+                </p>
+                <p class="info-text alert">
+                  <span id="welcomeMsg">Hello </span>
+                </p>
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="connectAsC"
+                >
+                  I am a Customer
+                </button>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/62c271c3b0d10b6f3e7aa032/1g73oop8f';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
-        <!--End of Tawk.to Script-->
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="connectAsP"
+                >
+                  I am a service Provider
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <title>Bdating Home Page</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    <img src="assets/img/logo.png" alt="">
-                </a>
+      </section>
+    </main>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#features" class="nav__link">Features</a>
-                        </li>
-                    </ul>
-
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
-                    </div>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-function-line"></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="main">
-            <!--=============== HOME ===============-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div>
-                        <img src="assets/img/home.png" alt="" class="home__img" size>
-                    </div>
-                    
-                    <div class="home__data">
-                        <div class="home__header">
-                            <h1 class="home__title">BDating</h1>
-                            <h2 class="home__subtitle">BDating</h2>
-                        </div>
-
-                        <div class="home__footer">
-                            <h3 class="home__title-description">Overview</h3>
-                            <p class="home__description">
-                                Mobile first dating application. Find your peer, book a date, leave feedback, all at the tip of your finger.
-                                Enjoy your private dating life with safety, convenience and privacy in the first place.
-                            
-                            </p>
-                            <!-- <a href="#" class="button button--flex">
-                                <span class="button--flex">
-                                    <i class="ri-shopping-bag-line button__icon"></i></i> Add to Bag
-                                </span>
-                                <span class="home__price">$299</span>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-           
-            <section class="specs section grid" id="features">
-                <h2 class="section__title section__title-gradient">Features</h2>
-
-                <div class="specs__container container grid">
-                    <div class="specs__content grid">
-                        <div class="specs__data">
-                            <!-- <i class="ri-bluetooth-line specs__icon"></i> -->
-                            <h3 class="specs__title">Online Booking</h3>
-                            <span class="specs__subtitle">searching for ideal mates close to you</span>
-                            <span class="specs__subtitle">matches you, and endorsed by others</span>
-                        </div>
+    <script src="bundle.js" defer></script>
     
-                        <div class="specs__data">
-                            <!-- <i class="ri-battery-charge-line specs__icon"></i> -->
-                            <h3 class="specs__title">Convenience</h3>
-                            <span class="specs__subtitle">No need to carry or bank transfer</span>
-                            <span class="specs__subtitle">all transaction dealt by platform</span>
-                        </div>
-                        <div class="specs__data">
-                            <!-- <i class="ri-battery-charge-line specs__icon"></i> -->
-                            <h3 class="specs__title">Privacy (Advanced)</h3>
-                            <span class="specs__subtitle">Pay by crypto currency. You don't need</span>
-                            <span class="specs__subtitle">to expose your ID or credit card.</span>
-                        </div>
-                        <div class="specs__data">
-                            <!-- <i class="ri-plug-line specs__icon"></i> -->
-                            <h3 class="specs__title">Endorsed Ranking</h3>
-                            <span class="specs__subtitle">Trust is built on historical endorsement.</span>
-                            <span class="specs__subtitle">Service quality is verified.</span>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <img src="assets/img/calendar.jpg" alt="" class="specs__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--=============== CASE ===============-->
-            <section class="case section grid" id="case">
-                <h2 class="section__title section__title-gradient">Why Bdating</h2>
-
-                <div class="case__container container grid">
-                    <div>
-                        <img src="assets/img/mask.png" alt="" class="case__img">
-                    </div>
-
-                    <div class="case__data">
-                        <p class="case__description">We treat your privacy as top effort. With crypto currency technology, no one can trace 
-                            your true identity behind the crypto wallet.
-                        </p>
-                        <a href="#" class="button button--flex">
-                            <i class="ri-information-line button__icon"></i> More info
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            
-            <p class="footer__copy">
-                &#169; Bdating. All right reserved</a>
-            </p>
-        </footer>
-
-        <!--=============== SCROLL UP ===============-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-s-line scrollup__icon"></i>
-        </a>
-        
-        <!--=============== SCROLL REVEAL ===============-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+  </body>
 </html>
