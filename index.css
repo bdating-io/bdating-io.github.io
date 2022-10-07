@@ -9,7 +9,7 @@
   height: 100vh;
   width: 100vw;
   z-index: -100;
-  /* background-image: url('./asian-girl.jpg'); */
+  background-image: url('./asian-girl.jpg');
   background-position: unset;
   background-repeat:no-repeat;
   background-size: cover;
@@ -31,18 +31,32 @@
 } */
 
 #header {
-  height: 200px;
+  height: 15vh;
 }
 
 #footer {
-  height: 200px;
+  height: 10vh;
 }
 
-.icon {
-  max-width: 80px;
-  max-height: 80px;
+/* .icon {
+  width: 30px;
+  height: 30px;
+} */
+
+#logo {
+  max-height: 100px;
 }
 
-.logo {
-  max-width: 300px;
+.customer_registration_background {
+  background-color: rgba(232, 155, 51, 0.25);
+}
+
+.customer_registration {
+  height: 60px;
+  width: 60px;
+}
+
+.provider_registration {
+  height: 60px;
+  width: 60px;
 }
