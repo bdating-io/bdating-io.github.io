@@ -1,43 +1,48 @@
-section {
-  margin: 20px 0 20px 0;
+
+#welcome::after {
+  content: "";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  z-index: -100;
+  /* background-image: url('./asian-girl.jpg'); */
+  background-position: unset;
+  background-repeat:no-repeat;
+  background-size: cover;
+  opacity: 0.2;
 }
 
-.info-text {
-  font-size: 1.1em;
+/* body::after {
+  content: "";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: #000;
+  opacity: 0.7;
+} */
+
+#header {
+  height: 200px;
 }
 
-.full-width {
-  width: 100%;
+#footer {
+  height: 200px;
 }
 
-.card {
-  margin-bottom: 20px;
+.icon {
+  max-width: 80px;
+  max-height: 80px;
 }
 
-/* Logo & Header */
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#logo-container {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-#logo-text {
-  padding-top: 15px;
-  padding-bottom: 5px;
-}
-
-#mm-logo {
-  width: 100%;
-}
-
-/* Encrypt/Decrypt */
-
-#encryptMessageInput {
-  margin-bottom: 1rem;
+.logo {
+  max-width: 300px;
 }
