@@ -56,11 +56,10 @@
                         Powered by <br>CRYPTO CURRENCY
                     </p>
                     <p class="pt-10 md:pt-2 w-full text-3xl md:text-xl text-center text-white">We treat your privacy as
-                       our <b>TOP</b> effort.
+                        our <b>TOP</b> effort.
                     </p>
                 </div>
-                <a
-                    href="#entrance"
+                <a href="#entrance"
                     class="w-full md:w-3/4 h-28 md:mt-6 flex-initial grid place-items-center bg-white text-[#222] rounded-full text-4xl text-center font-extrabold">
                     Let's Orgy!
                 </a>
@@ -70,21 +69,23 @@
         <section id="entrance" class="px-5 flex flex-col justify-center h-full">
             <div id="registration_panel" class="flex flex-col w-full items-center justify-center">
                 <h2 class="text-5xl font-extrabold font-sans place-self-center text-[#222]">Have FUN Now</h2>
-                <div class="w-full md:w-3/4 h-36 mt-20 grid place-items-center border-8 border-[#F4A027] rounded-full">
+                <a id="c_link"
+                    class="w-full md:w-3/4 h-36 mt-20 grid place-items-center border-8 border-[#F4A027] rounded-full">
                     <div
                         class="rounded-full bg-white text-[#222] text-center font-extrabold text-4xl grid place-items-center w-full h-full">
-                        I'm a <br/> customer
+                        I'm a <br /> customer
                     </div>
-                </div>
-                <div
+                </a>
+                <a id="p_link"
                     class="w-full md:w-3/4 h-36 mt-20 grid place-items-center bg-[#F4A027] text-[#222] rounded-full text-4xl text-center font-extrabold">
-                    I'm a <br/> service provider
-                </div>
+                    I'm a <br /> service provider
+                </a>
             </div>
             <div id="no_mm_panel" class="hidden text-3xl text-center flex flex-col justify-center items-center h-full">
                 Metamask is mandatory for Bdating. Please download metamask first then visit Bdating via Metamask
                 browser.
-                <a class="mt-5 w-full md:w-3/4 h-28 grid place-items-center bg-[#F4A027] text-[#222] rounded-full text-3xl text-center font-extrabold">
+                <a href="https://metamask.io/download/" target="_blank"
+                    class="mt-5 w-full md:w-3/4 h-28 grid place-items-center bg-[#F4A027] text-[#222] rounded-full text-3xl text-center font-extrabold">
                     Download Metamask
                 </a>
             </div>
@@ -95,13 +96,29 @@
     </div>
 </body>
 <script>
+    const p_base_url = 'http://localhost:3000/#/signup';
+    const c_base_url = 'http://localhost:3001/#/signup';
     const params = new URLSearchParams(window.location.search);
-    
-    console.log(params.get('referrerCode'))
+    const referralCode = params.get('referralCode')
+
     if (window.ethereum === undefined) {
-        console.log('no')
         document.getElementById('registration_panel').classList.add("hidden");
         document.getElementById('no_mm_panel').classList.remove("hidden");
+    } else {
+        let c_invitation = c_base_url;
+        let p_invitation = p_base_url;
+        if (referralCode != undefined && referralCode.length > 0) {
+            c_invitation += '?referralCode=' + referralCode;
+            p_invitation += '?referralCode=' + referralCode;
+        }
+        document.getElementById('c_link').onclick = function () {
+            window.location.href = c_invitation;
+            return false;
+        };
+        document.getElementById('p_link').onclick = function () {
+            window.location.href = p_invitation;
+            return false;
+        };
     }
 </script>
 
