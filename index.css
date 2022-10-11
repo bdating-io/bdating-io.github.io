@@ -13,10 +13,10 @@
   background-position: unset;
   background-repeat:no-repeat;
   background-size: cover;
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
-body::after {
+/* body::after {
   content: "";
   position: fixed;
   right: 0;
@@ -27,36 +27,24 @@ body::after {
   width: 100vw;
   z-index: -1;
   background-color: #000;
-  opacity: 0.2;
+  opacity: 0.6;
+} */
+
+#hero {
+  height: 93vh;
 }
 
-#header {
-  height: 15vh;
+/* #footer {
+  height: 10vh
+} */
+
+#entrance {
+  height: 70vh;
 }
 
-#footer {
-  height: 10vh;
-}
 
 /* .icon {
   width: 30px;
   height: 30px;
 } */
 
-#logo {
-  max-height: 100px;
-}
-
-.customer_registration_background {
-  background-color: rgba(232, 155, 51, 0.25);
-}
-
-.customer_registration {
-  height: 60px;
-  width: 60px;
-}
-
-.provider_registration {
-  height: 60px;
-  width: 60px;
-}
