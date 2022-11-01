@@ -34,7 +34,13 @@
   height: 85vh;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 375px) {
+  #hero {
+    height: 93vh;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 640px) {
   #hero {
     height: 80vh;
   }
