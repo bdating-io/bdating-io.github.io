@@ -34,18 +34,18 @@ html, body {
 } */
 
 #hero {
-  height: 85vh;
+  height: calc(85vh);
 }
 
 @media screen and (max-width: 375px) {
   #hero {
-    height: 93vh;
+    height: calc(93vh);
   }
 }
 
 @media screen and (min-width: 376px) and (max-width: 640px) {
   #hero {
-    height: 80vh;
+    height: calc(80vh);
   }
 }
 
