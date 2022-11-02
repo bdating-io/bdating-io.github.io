@@ -96,6 +96,8 @@
     </div>
 </body>
 <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
     const p_base_url = 'https://p.app.bdating.io/#/signup';
     const c_base_url = 'https://c.app.bdating.io/#/signup';
     const params = new URLSearchParams(window.location.search);
