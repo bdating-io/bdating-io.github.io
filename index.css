@@ -35,31 +35,20 @@ html, body {
 
 #hero {
   height: 85vh;
-  height: calc(var(--vh, 1vh) * 85);;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   #hero {
     height: 93vh;
-    height: calc(var(--vh, 1vh) * 93);
-  }
-}
-
-@media screen and (min-width: 376px) and (max-width: 640px) {
-  #hero {
-    height: 80vh;
-    height: calc(var(--vh, 1vh) * 80);
   }
 }
 
 #footer {
   height: 10vh;
-  height: calc(var(--vh, 1vh) * 10);
 }
 
 #entrance {
   height: 80vh;
-  height: calc(var(--vh, 1vh) * 80);;
 }
 
 
