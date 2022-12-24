@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Bdating.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
     <link rel="stylesheet" href="index.css" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -13,7 +13,7 @@
     <div id="welcome" class="flex flex-col">
         <div id="hero" class="bg-[#222] px-10 pb-10 flex flex-col">
             <div id="header" class="py-10 md:py-5 grid grid-cols-5 md:grid-cols-6">
-                <img id="logo" class="rounded-2xl col-span-2 md:col-span-1" src="logo.png" />
+                <img id="logo" class="rounded-2xl col-span-2 md:col-span-1" src="assets/img/logo.png" />
                 <!-- social media -->
                 <!-- <div
                     class="h-full w-full col-start-3 col-end-3 grid grid-rows-1 grid-cols-3 place-items-center gap-10">
@@ -50,7 +50,7 @@
             <div id="body" class="h-full flex flex-col justify-center items-center">
                 <div id="desc" class="flex flex-col items-center justify-center flex-1">
                     <div class="w-28 md:w-44 grid">
-                        <img src="mask.png" class="place-self-end" />
+                        <img src="assets/img/mask.png" class="place-self-end" />
                     </div>
                     <p class="text-5xl md:text-4xl font-extrabold pt-10 text-bold text-center text-white">
                         Powered by <br>CRYPTO CURRENCY
@@ -96,11 +96,20 @@
     </div>
 </body>
 <script>
-    const p_base_url = 'https://p.app.bdating.io/#/signup';
-    const c_base_url = 'https://c.app.bdating.io/#/signup';
-    const params = new URLSearchParams(window.location.search);
-    const referralCode = params.get('referralCode')
+    function fuzzyGetReferralCode() {
+        let referralCode = new URLSearchParams(window.location.search).get('referralCode');
+        if (!referralCode) {
+            referralCode = new URLSearchParams(window.location.hash.slice(window.location.hash.indexOf('?'))).get('referralCode')
+        }
+        if (referralCode && referralCode.endsWith('/')) {
+            referralCode = referralCode.slice(0, -1);
+        }
+        return referralCode;
+    };
 
+    const p_base_url = 'https://p.app.bdating.io/';
+    const c_base_url = 'https://c.app.bdating.io/';
+    const referralCode = fuzzyGetReferralCode();
     if (window.ethereum === undefined) {
         document.getElementById('registration_panel').classList.add("hidden");
         document.getElementById('no_mm_panel').classList.remove("hidden");
