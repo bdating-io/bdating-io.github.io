@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <title>Bdating.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="screen-orientation"content="portrait">
+    <meta name="x5-orientation"content="portrait">
+    <meta name="orientation"content="portrait">
     <link rel="icon" type="image/jpg" href="assets/img/favico.jpg" />
     <link rel="stylesheet" href="index.css" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,15 +55,15 @@
                     <div class="w-28 md:w-44 grid">
                         <img src="assets/img/mask.png" class="place-self-end" />
                     </div>
-                    <p class="text-5xl md:text-4xl font-extrabold pt-10 text-bold text-center text-white">
+                    <p class="text-xl md:text-4xl font-extrabold pt-10 text-bold text-center text-white">
                         Powered by <br>CRYPTO CURRENCY
                     </p>
-                    <p class="pt-10 md:pt-2 w-full text-3xl md:text-xl text-center text-white">We treat your privacy as
+                    <p class="pt-10 md:pt-2 w-full text-xl md:text-xl text-center text-white">We treat your privacy as
                         our <b>TOP</b> effort.
                     </p>
                 </div>
                 <a href="#entrance"
-                    class="w-full md:w-3/4 h-24 md:h-28 md:mt-6 flex-initial grid place-items-center bg-white text-[#222] rounded-full text-4xl text-center font-extrabold">
+                    class="w-full md:w-3/4 h-24 md:h-28 md:mt-6 flex-initial grid place-items-center bg-white text-[#222] rounded-full text-2xl sm:text-4xl text-center font-extrabold">
                     Let's Orgy!
                 </a>
             </div>
@@ -81,7 +84,7 @@
                     I'm a <br /> service provider
                 </a>
             </div>
-            <div id="no_mm_panel" class="hidden text-3xl text-center flex flex-col justify-center items-center h-full">
+            <div id="no_mm_panel" class="hidden text-xl sm:text-3xl text-center flex flex-col justify-center items-center h-full">
                 Metamask is mandatory for Bdating. Please download metamask first then visit Bdating via Metamask
                 browser.
                 <a href="https://metamask.io/download/" target="_blank"
@@ -107,6 +110,7 @@
         return referralCode;
     };
 
+    screen.orientation.lock("portrait")
     const p_base_url = 'https://p.app.bdating.io/';
     const c_base_url = 'https://c.app.bdating.io/';
     const referralCode = fuzzyGetReferralCode();
