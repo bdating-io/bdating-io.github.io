@@ -19,14 +19,14 @@ body::after {
   opacity: 0.4;
 }
 
-@media (orientation: landscape) and (max-width: 640px)  {
+/* @media (orientation: landscape) and (max-width: 640px)  {
   #landscape-alarm {
     display: flex !important;
   }
   #hero, #entrance, #footer {
     display: none !important;
   }
-}
+} */
 
 /* body::after {
   content: "";
