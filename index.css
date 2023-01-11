@@ -28,6 +28,12 @@ body::after {
   }
 } */
 
+@media (max-height:486px) {
+  #mask {
+    display: none !important;
+  }
+}
+
 /* body::after {
   content: "";
   position: fixed;
