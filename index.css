@@ -2,7 +2,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-#welcome::after {
+body::after {
   content: "";
   position: fixed;
   right: 0;
@@ -19,11 +19,21 @@ html, body {
   opacity: 0.4;
 }
 
+@media (orientation: landscape) and (max-width: 640px)  {
+  #landscape-alarm {
+    display: flex !important;
+  }
+  #hero, #entrance, #footer {
+    display: none !important;
+  }
+}
+
 /* body::after {
   content: "";
   position: fixed;
   right: 0;
   bottom: 0;
+  background-image: url('./asian-girl.jpg');
   min-width: 100vw;
   min-height: 100vh;
   height: 100vh;
@@ -32,28 +42,3 @@ html, body {
   background-color: #000;
   opacity: 0.6;
 } */
-
-#hero {
-  height: 85vh;
-}
-
-@media screen and (max-width: 640px) {
-  #hero {
-    height: 93vh;
-  }
-}
-
-#footer {
-  height: 10vh;
-}
-
-#entrance {
-  height: 80vh;
-}
-
-
-/* .icon {
-  width: 30px;
-  height: 30px;
-} */
-
