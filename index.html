@@ -85,15 +85,6 @@
                 I'm a <br class="flex sm:hidden" /> service provider
             </a>
         </div>
-        <div id="no_mm_panel"
-            class="hidden text-xl sm:text-3xl text-center flex flex-col justify-center items-center h-full">
-            Metamask is mandatory for Bdating. Please download metamask first then visit Bdating via Metamask
-            browser.
-            <a href="https://metamask.io/download/" target="_blank"
-                class="mt-5 w-full sm:w-3/4 h-20 sm:h-24 text-2xl sm:text-3xl grid place-items-center bg-[#F4A027] text-[#222] rounded-full text-center font-extrabold">
-                Download Metamask
-            </a>
-        </div>
     </section>
     <div id="footer"
         class="mt-10 bottom-0 left-0 w-full text-lg sm:text-xl text-center text-[#222] flex grid place-items-center">
@@ -124,25 +115,20 @@
     const p_base_url = 'https://p.bdating.io/';
     const c_base_url = 'https://c.bdating.io/';
     const referralCode = fuzzyGetReferralCode();
-    if (window.ethereum === undefined) {
-        document.getElementById('registration_panel').classList.add("hidden");
-        document.getElementById('no_mm_panel').classList.remove("hidden");
-    } else {
-        let c_invitation = c_base_url;
-        let p_invitation = p_base_url;
-        if (referralCode != undefined && referralCode.length > 0) {
-            c_invitation += '?referralCode=' + referralCode;
-            p_invitation += '?referralCode=' + referralCode;
-        }
-        document.getElementById('c_link').onclick = function () {
-            window.location.href = c_invitation;
-            return false;
-        };
-        document.getElementById('p_link').onclick = function () {
-            window.location.href = p_invitation;
-            return false;
-        };
+    let c_invitation = c_base_url;
+    let p_invitation = p_base_url;
+    if (referralCode != undefined && referralCode.length > 0) {
+        c_invitation += '?referralCode=' + referralCode;
+        p_invitation += '?referralCode=' + referralCode;
     }
+    document.getElementById('c_link').onclick = function () {
+        window.location.href = c_invitation;
+        return false;
+    };
+    document.getElementById('p_link').onclick = function () {
+        window.location.href = p_invitation;
+        return false;
+    };
 </script>
 
 </html>
